@@ -34,9 +34,9 @@ safe-outputs:
 Keep `site/content/github-info.md` current for Mona to review.
 
 1. Use GitHub repository API tools to read `notes/mona-notes.md`, `site/content/github-info.md`, and any repository guidance or reference files you need. Do not use terminal, CLI, or sandboxed commands to read repository guidance or reference files.
-2. Use the web-fetch tool to fetch `https://github.blog/latest/`.
-3. Use the web-fetch tool to fetch `https://github.blog/changelog/`.
-4. Use the web-fetch tool to fetch Awesome Copilot workflows from `https://awesome-copilot.github.com/workflows/`.
+2. Use the `web_fetch` tool to fetch `https://github.blog/latest/`.
+3. Use the `web_fetch` tool to fetch `https://github.blog/changelog/`.
+4. Use the `web_fetch` tool to fetch Awesome Copilot workflows from `https://awesome-copilot.github.com/workflows/`. The workflow frontmatter calls this capability `web-fetch`, but its runtime tool name is `web_fetch`; do not report it as unavailable because of the naming difference.
 5. Compare the current public information with Mona's notes and the existing content. Preserve relevant material, factual accuracy, source links, and the file's established structure and voice.
 6. On every run, update the YAML frontmatter in `site/content/github-info.md` so `last_updated` contains the current UTC date and time in `YYYY-MM-DDTHH:MM:SSZ` format. Add the frontmatter and field if they do not exist.
 7. If a meaningful content update is needed, update `site/content/github-info.md` with useful, current information. Do not make speculative changes.
